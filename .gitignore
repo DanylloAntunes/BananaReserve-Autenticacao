@@ -1,0 +1,26 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/BananaReserve-Autenticacao.slnx/DesignTimeBuild
+/.vs/BananaReserve-Autenticacao.slnx/FileContentIndex
+/.vs/BananaReserve.Autenticacao.slnx/DesignTimeBuild
+/.vs/BananaReserve.Autenticacao.slnx/FileContentIndex
+/.vs/BananaReserve.Autenticacao.slnx/v18
+/.vs/ProjectEvaluation
+/BananaReserve.Autenticacao.Common/bin/Debug/net8.0
+/BananaReserve.Autenticacao.Common/obj
+/BananaReserve.Autenticacao.Domain/bin/Debug/net8.0
+/BananaReserve.Autenticacao.Domain/obj
+/BananaReserve.Autenticacao.Infrastructure/bin/Debug/net8.0
+/BananaReserve.Autenticacao.Infrastructure/obj
+/BananaReserve.Autenticacao.IoC/bin/Debug/net8.0
+/BananaReserve.Autenticacao.IoC/obj
+/BananaReserve.Autenticacao.Unitario/bin/Debug/net8.0
+/BananaReserve.Autenticacao.Unitario/obj
+/.vs
+/BananaReserve.Autenticacao.WebApi/.vs
+/BananaReserve.Autenticacao.WebApi/bin/Debug/net8.0
+/BananaReserve.Autenticacao.WebApi/obj
+/BananaReverve.Autenticacao.Application/bin/Debug/net8.0
+/BananaReverve.Autenticacao.Application/obj
