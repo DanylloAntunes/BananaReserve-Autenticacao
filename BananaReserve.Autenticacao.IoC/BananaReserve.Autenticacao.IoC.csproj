@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BananaReserve.Autenticacao.Common\BananaReserve.Autenticacao.Common.csproj" />
+    <ProjectReference Include="..\BananaReserve.Autenticacao.Domain\BananaReserve.Autenticacao.Domain.csproj" />
+    <ProjectReference Include="..\BananaReserve.Autenticacao.Infrastructure\BananaReserve.Autenticacao.Infrastructure.csproj" />
+    <ProjectReference Include="..\BananaReverve.Autenticacao.Application\BananaReserve.Autenticacao.Application.csproj" />
+  </ItemGroup>
+
+</Project>

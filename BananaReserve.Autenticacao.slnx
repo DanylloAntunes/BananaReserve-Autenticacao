@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/Aplication/">
+    <Project Path="BananaReverve.Autenticacao.Application/BananaReserve.Autenticacao.Application.csproj" />
+  </Folder>
+  <Folder Name="/Crosscutting/">
+    <Project Path="BananaReserve.Autenticacao.Common/BananaReserve.Autenticacao.Common.csproj" Id="3fa379e6-9ce0-49f8-a46a-92cdfd4bcf68" />
+    <Project Path="BananaReserve.Autenticacao.IoC/BananaReserve.Autenticacao.IoC.csproj" Id="32c6876c-8af4-4700-8ced-3125e632b599" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="BananaReserve.Autenticacao.Domain/BananaReserve.Autenticacao.Domain.csproj" Id="341f6c53-1c50-4864-8682-054ca405a274" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="BananaReserve.Autenticacao.Infrastructure/BananaReserve.Autenticacao.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="BananaReserve.Autenticacao.Unitario/BananaReserve.Autenticacao.Unitario.csproj" Id="1c8c30f7-a9d8-4b93-bbb8-dbe26f05f7f7" />
+  </Folder>
+  <Folder Name="/WebApi/">
+    <Project Path="BananaReserve.Autenticacao.WebApi/BananaReserve.Autenticacao.WebApi.csproj" />
+  </Folder>
+</Solution>

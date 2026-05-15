@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  bananareserve.autenticacao.webapi:
+    container_name: bananareserve_autenticacao_webapi
+    image: ${DOCKER_REGISTRY-}bananareserveautenticacaowebapi
+    build:
+      context: .
+      dockerfile: BananaReserve.Autenticacao.WebApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Host=bananareserve.autenticacao.database;Port=5432;Database=developer_evaluation;Username=developer;Password=ev@luAt10n
+    ports:
+      - "8080:8080"
+    depends_on:
+      bananareserve.autenticacao.migrator:
+        condition: service_completed_successfully
+
+  bananareserve.autenticacao.migrator:
+    container_name: bananareserve_autenticacao_migrator
+    build:
+      context: .
+      dockerfile: BananaReserve.Autenticacao.WebApi/Dockerfile
+      target: migrate
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=bananareserve.autenticacao.database;Port=5432;Database=developer_evaluation;Username=developer;Password=ev@luAt10n
+    depends_on:
+      bananareserve.autenticacao.database:
+        condition: service_healthy
+    restart: "no"
+
+  bananareserve.autenticacao.database:
+    container_name: bananareserve_autenticacao_database
+    image: postgres:13
+    environment:
+      POSTGRES_DB: developer_evaluation
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: ev@luAt10n
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U developer -d developer_evaluation"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
