@@ -23,6 +23,7 @@ public class YourDbContextFactory : IDesignTimeDbContextFactory<DefaultContext>
         IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: true)
+            .AddJsonFile("appsettings.Development.json", optional: true)
             .AddEnvironmentVariables()
             .Build();
 
@@ -31,7 +32,7 @@ public class YourDbContextFactory : IDesignTimeDbContextFactory<DefaultContext>
 
         builder.UseNpgsql(
                connectionString,
-               b => b.MigrationsAssembly("BananaReserve.Infrastructure")
+               b => b.MigrationsAssembly("BananaReserve.Autenticacao.Infrastructure")
         );
 
         return new DefaultContext(builder.Options);

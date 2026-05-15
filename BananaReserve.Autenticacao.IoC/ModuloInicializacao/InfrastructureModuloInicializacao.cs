@@ -18,7 +18,7 @@ public class InfrastructureModuloInicializacao : IModuloInicializacao
         builder.Services.AddDbContext<DefaultContext>(options =>
             options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection"),
-                b => b.MigrationsAssembly("BananaReserve.Infrastructure")
+                b => b.MigrationsAssembly("BananaReserve.Autenticacao.Infrastructure")
             )
         );
     }
